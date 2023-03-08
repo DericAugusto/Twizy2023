@@ -1,26 +1,10 @@
-# Twizy2023
+# Project Twizzy 2023
 
-Traitement d'image
+Second year project developed as part of the curriculum of the Digital Systems branch of the École nationale supérieure d’électricité et de mécanique in the Université de Lorraine (Vandœuvre-lès-Nancy - FR).
 
-- Faire une fonction propre TemplateMatching pour une image
-- Dans templatematching, décider à quoi correspondent les panneaux
-- Prendre en compte le fait de pouvoir avoir plusieurs panneaux dans une seule image
-
-- Créer une fonction pour les vidéos
-- S'intéresser à la partie apprentissage automatique (voir avec le prof)
-- Alimenter la base de données avec les points caractéristiques de chaque template ainsi que ses descripteurs
-- Dans la fonction TemplateMatching, ne pas ré-extraire les caractéristiques si présentes dans la bdd
-
-Développement
-
-- Créer une interface graphique
-- Possiblité de faire une démo avec des images pré-existantes
-- Pouvoir upload ses propres images
-- Bouton "Analyser" qui va lancer la fonction TemplateMatching pour l'image uploadée
-
-Bonus 
-
-- Créer une application web
-- Créer une base de données
-- Rajouter des panneaux en template
-- Prendre des screens de manière aléatoire des images de Streetview grâce à une api
+group members :
+- Déric Augusto França de Sales;
+- Ibraim Souley;
+- Oumnia Lachgar;
+- Mathis Eddam;
+- Theo Bourderon.

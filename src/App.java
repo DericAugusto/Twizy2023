@@ -25,6 +25,13 @@ public class App extends JFrame {
 
         //Créer un deuxiéme bouton
         new UploadButton(0,0,100,100,"Open","").add(this);
+        
+        //Create a label to display the image
+        String path= "D:/Theo/Pictures/Insta/ComptePhoto/2.png";
+        ImageIcon icon = new ImageIcon(path);
+        JLabel label = new JLabel(icon);
+        label.setBounds(200, 200, 300, 300);
+        add(label);
 
         // Définir la disposition de la fenêtre
         setLayout(new BorderLayout());

@@ -6,24 +6,22 @@ public class App extends JFrame {
     public App() {
         // Définir le titre et la taille de la fenêtre
         setTitle("Application");
-        setPreferredSize(new Dimension(400, 300));
-        setMaximumSize(new Dimension(800, 600));
+
+        // Set window size properly
+        pack();
+        final int WIDTH = 400;
+        final int HEIGHT = 400;
+        setPreferredSize(new Dimension(WIDTH + getInsets().left + getInsets().right,
+                HEIGHT + getInsets().top + getInsets().bottom));
+        pack();
 
         // Créer un bouton et l'ajouter à la fenêtre
-        JButton myButton = new JButton("Cliquez ici !");
-        myButton.setBounds(200, 0, 50, 50);
-        add(myButton);
+        new Bouton(WIDTH/2, HEIGHT/2, 100, 100, "Cliquez").add(this);
 
         // Définir la disposition de la fenêtre
         setLayout(new BorderLayout());
 
-        // Ajouter un gestionnaire d'événements au bouton
-        myButton.addActionListener(e -> {
-            JOptionPane.showMessageDialog(null, "Bonjour !");
-        });
-
-        // Finaliser la fenêtre
-        pack();
+        // Finaliser la fenetre
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }

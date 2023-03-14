@@ -10,8 +10,4 @@ public class PushButton extends Button {
             JOptionPane.showMessageDialog(null, "Bonjour !");
         });
     }
-
-    public void add(JFrame window) {
-        window.add(this);
-    }
 }

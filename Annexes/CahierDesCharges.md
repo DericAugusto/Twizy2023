@@ -16,11 +16,11 @@
 - Créer une interface graphique
 - Possibilité de faire une démo avec des images pré-existantes
 - Pouvoir upload ses propres images
-- Bouton "Analyser" qui va lancer la fonction TemplateMatching pour l'image uploadée
+- Buttons.PushButton "Analyser" qui va lancer la fonction TemplateMatching pour l'image uploadée
 
 ## Bonus
 
 - Créer une application web
 - Créer une base de données
-- Rajouter des panneaux en template
+- Rajouter des panneaux en template (exemple: reconnaitre la nationalité)
 - Prendre des screens de manière aléatoire des images de StreetView grâce à une api

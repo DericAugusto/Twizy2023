@@ -22,5 +22,5 @@
 
 - Créer une application web
 - Créer une base de données
-- Rajouter des panneaux en template (exemple: reconnaitre la nationalité)
+- Rajouter des panneaux en template (exemple: reconnaître la nationalité)
 - Prendre des screens de manière aléatoire des images de StreetView grâce à une api

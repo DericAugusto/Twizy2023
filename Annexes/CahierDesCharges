@@ -1,29 +1,17 @@
 Traitement de l'image:
 
-- créer une fonction qui permet de traiter une image et d'en extraire ses points d'interets
+- créer une fonction qui permet de traiter une image et d'en extraire ses points d’intérêts
 - pouvoir traiter une video (la découper, traiter chaque image et en extraire les résultats)
-- sotcker les résultats des panneaux données dans un fichier pour la démo
+- stocker les résultats des panneaux données dans un fichier pour la démo
 
 Interface:
- 
+
 - pouvoir executer une demo avec les fichiers existants
-- pouvoir inserer un fichier(image ou video) et le traiter
+- pouvoir insérer un fichier(image ou video) et le traiter
 
 Bonus:
+
 - stocker les résultats dans une base de donnée
 - faire l'interface via une page web
 - intégrer une API(ex: google street view dans Nancy)
-- reconnaitre la nationalité du panneau
-
-
-
-
-
-
-
-
-
-
-
-
-
+- reconnaître la nationalité du panneau

@@ -19,5 +19,5 @@ To run the project, first you'll need to instal the Java version 19 or superior.
 
 For windows users, it's important to remember to set the java variables path in the system variables. This [video](https://www.youtube.com/watch?v=AUL--F5Wdh8&t=26s) is a good installation guide. You'll also need to install [Maven](https://www.youtube.com/watch?v=km3tLti4TCM), OpenCv (version 2.4.13.6) and the [MySQL](https://www.youtube.com/watch?v=km3tLti4TCM) applications. 
 
-For executing in VsCode, it's necessary to configure the line : "vmArgs": "-Djava.library.path=C:\\...\\opencv_2.4.13.6\\build\\java\\x64", below "projectName" in the configuration file (launch.jason). It's also necessary to add the reference of the OpenCv library (...\opencv_2.4.13.6\build\java\opencv-2413.jar) in the JAVA PROJECTS section, in the lowe left corner of the VSCode Explorer interface.
+For executing in VsCode, it's necessary to configure the line : "vmArgs": "-Djava.library.path=C:\\...\\opencv_2.4.13.6\\build\\java\\x64", below "projectName" in the configuration file (launch.jason). It's also necessary to add the reference of the OpenCv library (...\opencv_2.4.13.6\build\java\opencv-2413.jar) and the [mysql-connector-j-8.0.33.jar](https://www.youtube.com/watch?v=h6xwRwlFypM) in the JAVA PROJECTS section, in the lowe left corner of the VSCode Explorer interface.
 

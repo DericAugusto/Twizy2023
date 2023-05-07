@@ -23,4 +23,20 @@ public class MainController {
             stage.setScene(scene);
             stage.show();
     }
+
+    public void switchSceneToRegister(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("register.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchSceneToLogin(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

@@ -6,7 +6,13 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.Parent;
+import com.example.utils.database;
+
 public class Main extends Application {
+	public static int userId = 0;
+	public static database db = new database("localhost", "twizy", "root", "");
+	// d2>tJRJdYp=&Mo]U
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {

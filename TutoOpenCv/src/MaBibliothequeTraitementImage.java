@@ -84,10 +84,11 @@ public class MaBibliothequeTraitementImage {
 		Mat threshold_img2 = new Mat();
 		//threshold_img1 = seuillage_exemple(input, seuilRougeViolet);
 		//threshold_img1 = seuillage_exemple(input, seuilRougeOrange);
-		Core.inRange(input,new Scalar(0,seuilSaturation,100),new Scalar(seuilRougeOrange,255,255),threshold_img1);
-		Core.inRange(input,new Scalar(160,seuilSaturation,100),new Scalar(seuilRougeViolet,255,255),threshold_img2);
+		Core.inRange(input,new Scalar(0,seuilSaturation,0),new Scalar(seuilRougeOrange,255,255),threshold_img1);
+		Core.inRange(input,new Scalar(160,seuilSaturation,0),new Scalar(seuilRougeViolet,255,255),threshold_img2);
 		Core.bitwise_or(threshold_img1,threshold_img2, threshold_img);
-		Imgproc.GaussianBlur(threshold_img,threshold_img,new Size(9,9),2,2);
+		Imgproc.GaussianBlur(threshold_img,threshold_img,new Size(threshold_img.rows(),threshold_img.cols()),9,9);
+		
 
 		//image satur�e � retourner
 		return threshold_img;
@@ -95,7 +96,6 @@ public class MaBibliothequeTraitementImage {
 
 
 	}
-
 
 	//Methode d'exemple qui permet de saturer les couleurs rouges � partir d'un seul seuil 
 	public static Mat seuillage_exemple(Mat input, int seuilRougeViolet){
@@ -111,7 +111,7 @@ public class MaBibliothequeTraitementImage {
 		return rouges;
 	}
 
-		//Methode qui permet d'extraire les contours d'une image donnee
+	//Methode qui permet d'extraire les contours d'une image donnee
 	public static List<MatOfPoint> ExtractContours(Mat input) {
 		// Detecter les contours des formes trouv�es
 		int thresh = 100;
@@ -208,8 +208,6 @@ public class MaBibliothequeTraitementImage {
 
 	}
 
-	
-
 	public static double angle(Point a, Point b, Point c) {
 		Point ab = new Point( b.x - a.x, b.y - a.y );
 		Point cb = new Point( b.x - c.x, b.y - c.y );
@@ -219,7 +217,6 @@ public class MaBibliothequeTraitementImage {
 		return Math.floor(alpha * 180. / Math.PI + 0.5);
 	}
 
-	
 	//methode � completer
 	public static double tauxDeSimilitude(Mat object,String signfile) {
 
@@ -235,29 +232,30 @@ public class MaBibliothequeTraitementImage {
 		//Conversion du panneau extrait de l'image en gris et normalisation et redimensionnement � la taille du panneau de r�ference
 		Mat grayObject = new Mat(panneauref.rows(), panneauref.cols(), panneauref.type());
 		Imgproc.resize(object, object, graySign.size());
-		//afficheImage("Panneau extrait de l'image",object);
+		afficheImage("Panneau extrait de l'image",object);
 		Imgproc.cvtColor(object, grayObject, Imgproc.COLOR_BGRA2GRAY);
 		Core.normalize(grayObject, grayObject, 0, 255, Core.NORM_MINMAX);
-		//Imgproc.resize(grayObject, grayObject, graySign.size());	
+		Imgproc.resize(grayObject, grayObject, graySign.size());	
 		
 		
 		
 		//� compl�ter...
-		
-		return -1;
+		int totalpixel = panneauref.rows()*panneauref.cols();
+		double cpt = 0;
+		for (int i=0;i<panneauref.rows();i++){
+			for (int j=0;j<panneauref.cols();j++){
+				if (grayObject.get(i,j)==graySign.get(i,j)){
+					cpt+=1;
+				}
+
+			}
+		}
+		return cpt/totalpixel;
 		
 		
 
 
 	}
-
-
-
-	
-
-
-
-
 
 }
 

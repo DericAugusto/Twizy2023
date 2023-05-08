@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelpController {
+public class ContactUsController {
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -22,8 +22,8 @@ public class HelpController {
         stage.show();
     }
 
-    public void switchSceneToAboutUs(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("aboutus.fxml"));
+    public void switchSceneToHelp(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("help.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -38,8 +38,8 @@ public class HelpController {
         stage.show();
     }
 
-    public void switchSceneToContactUs(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("contact.fxml"));
+    public void switchSceneToAboutUs(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("aboutus.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

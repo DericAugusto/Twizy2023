@@ -10,18 +10,13 @@
  * pour les autres couleurs : +
  */
 
-import org.opencv.core.Core;
 import org.opencv.core.Mat;
-import org.opencv.highgui.Highgui;
-
 
 public class Exercice1 {
 
   public static void main(String[] args) {
-    System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-    // Ctrl + D
-    String currentDir = System.getProperty("user.dir");
-    Mat m = Highgui.imread(currentDir + "\\images\\opencv.png");
+    Mat m = Utils.LectureImage("opencv.png");
+
     for (int i=0; i < m.height(); i++){
       for (int j=0; j < m.width(); j++){
         double[] BGR = m.get(i, j);

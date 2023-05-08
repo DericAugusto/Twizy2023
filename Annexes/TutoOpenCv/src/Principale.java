@@ -28,7 +28,7 @@ public class Principale {
 		Mat saturee=MaBibliothequeTraitementImage.seuillage(transformee, 6, 170, 110);
 		Mat objetrond = null;
 
-		//Cr�ation d'une liste des contours � partir de l'image satur�e
+		//Création d'une liste des contours a partir de l'image saturée
 		List<MatOfPoint> ListeContours= MaBibliothequeTraitementImage.ExtractContours(saturee);
 		int i=0;
 		double [] scores=new double [6];
@@ -38,7 +38,7 @@ public class Principale {
 			objetrond=MaBibliothequeTraitementImage.DetectForm(m,contour);
 
 			if (objetrond!=null){
-				MaBibliothequeTraitementImage.afficheImage("Objet rond det�ct�", objetrond);
+				MaBibliothequeTraitementImage.afficheImage("Objet rond détecté", objetrond);
 				scores[0]=MaBibliothequeTraitementImage.tauxDeSimilitude(objetrond,"ref30.jpg");
 				scores[1]=MaBibliothequeTraitementImage.tauxDeSimilitude(objetrond,"ref50.jpg");
 				scores[2]=MaBibliothequeTraitementImage.tauxDeSimilitude(objetrond,"ref70.jpg");
@@ -47,20 +47,20 @@ public class Principale {
 				scores[5]=MaBibliothequeTraitementImage.tauxDeSimilitude(objetrond,"refdouble.jpg");
 
 
-				//recherche de l'index du maximum et affichage du panneau detect�
+				//recherche de l'index du maximum et affichage du panneau détecté
 				double scoremax=-1;
 				int indexmax=0;
 				for(int j=0;j<scores.length;j++){
 					if (scores[j]>scoremax){scoremax=scores[j];indexmax=j;}}	
-				if(scoremax<0){System.out.println("Aucun Panneau d�t�ct�");}
+				if(scoremax<0){System.out.println("Aucun Panneau détecté");}
 				else{switch(indexmax){
 				case -1:;break;
-				case 0:System.out.println("Panneau 30 d�t�ct�");break;
-				case 1:System.out.println("Panneau 50 d�t�ct�");break;
-				case 2:System.out.println("Panneau 70 d�t�ct�");break;
-				case 3:System.out.println("Panneau 90 d�t�ct�");break;
-				case 4:System.out.println("Panneau 110 d�t�ct�");break;
-				case 5:System.out.println("Panneau interdiction de d�passer d�t�ct�");break;
+				case 0:System.out.println("Panneau 30 détecté");break;
+				case 1:System.out.println("Panneau 50 détecté");break;
+				case 2:System.out.println("Panneau 70 détecté");break;
+				case 3:System.out.println("Panneau 90 détecté");break;
+				case 4:System.out.println("Panneau 110 détecté");break;
+				case 5:System.out.println("Panneau interdiction de dépasser détecté");break;
 				}}
 
 			}
